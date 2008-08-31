@@ -98,7 +98,7 @@ def isnsideok(nside):
 def isnpixok(npix):
     if hasattr(npix,'__len__'):
         nside = npy.sqrt(npy.asarray(npix)/12.)
-        return (nside == npy.floor(nside))
+        return type(x)(nside == npy.floor(nside))
     else:
         nside = npy.sqrt(npix/12.)
         return (nside == npy.floor(nside))

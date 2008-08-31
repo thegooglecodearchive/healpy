@@ -62,7 +62,7 @@ def write_map(filename,m,nest=False,dtype=npy.float32):
     tbhdu = pyf.new_table(coldefs)
     # add needed keywords
     tbhdu.header.update('PIXTYPE','HEALPIX','HEALPIX pixelisation')
-    if nest: ordering = 'NESTED'
+    if nest: ordering = 'NEST'
     else:    ordering = 'RING'
     tbhdu.header.update('ORDERING',ordering,
                         'Pixel ordering scheme, either RING or NESTED')
@@ -104,7 +104,7 @@ def read_map(filename,field=0,dtype=npy.float64,nest=False,hdu=1,h=False):
         raise ValueError('Wrong nside parameter.')
     ordering = hdulist[hdu].header.get('ORDERING','UNDEF').strip()
     if ordering == 'UNDEF':
-        ordering = (nest and 'NESTED' or 'RING')
+        ordering = (nest and 'NEST' or 'RING')
         warnings.warn("No ORDERING keyword in header file : "
                       "assume %s"%ordering)
     print 'ORDERING = %s in fits file'%ordering
@@ -122,7 +122,7 @@ def read_map(filename,field=0,dtype=npy.float64,nest=False,hdu=1,h=False):
             idx = pixelfunc.nest2ring(nside,npy.arange(m.size,dtype=npy.int64))
             m = m[idx]
             print 'Ordering converted to NEST'
-        elif (not nest) and ordering == 'NESTED':
+        elif (not nest) and ordering == 'NEST':
             idx = pixelfunc.ring2nest(nside,npy.arange(m.size,dtype=npy.int64))
             m = m[idx]
             print 'Ordering converted to RING'
