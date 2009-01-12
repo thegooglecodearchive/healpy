@@ -1,6 +1,5 @@
-rev  = "$Revision$"
+rev  = "37"
+date = "2009-01-12 19:09:46 +0100"
 
-revnumber = int(rev.strip('$')[9:])
-date = "$Date$"
+__version__='0.9.4'
 
-__version__='trunk-r%d'%(revnumber)
