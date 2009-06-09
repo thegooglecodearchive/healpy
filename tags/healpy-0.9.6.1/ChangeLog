@@ -1,0 +1,192 @@
+2009-04-17 02:43  cyrille.rosset
+
+	* [r50] healpy/version.py: set version number for tagged version
+
+2009-04-17 02:40  cyrille.rosset
+
+	* [r49] ., ChangeLog: Update ChangeLog; tag version 0.9.6
+
+2009-03-29 17:46  cyrille.rosset
+
+	* [r48] Add get_all_neighbours function (contribution from Sergey
+	  E. Koposov). Solve issue 17.
+
+2009-03-29 16:24  cyrille.rosset
+
+	* [r47] add ring2nest import in query_disc_func, so it works with
+	  nest=True; solve issue 18.
+
+2009-03-25 16:10  cyrille.rosset
+
+	* [r46] change warnings.ImportWarning to ImportWarning, and define
+	  ImportWarning if it does not exist (solve issue 16)
+
+2009-03-12 16:51  cyrille.rosset
+
+	* [r45] Update ChangeLog
+
+2009-03-12 14:55  cyrille.rosset
+
+	* [r43] Add #include <cstring> for compatibility with some new
+	  compilers
+
+2009-02-22 22:41  cyrille.rosset
+
+	* [r42] Correct missing npy. in _ud_grade_core
+
+2009-01-24 16:19  cyrille.rosset
+
+	* [r41] Update version.py
+
+2009-01-24 16:19  cyrille.rosset
+
+	* [r40] Add cartwiew, CartesianAxes, CartesianProj; tweak
+	  _segment_threshold, add _segment_step_rad, some new keywords to
+	  graticule...
+
+2009-01-18 20:51  cyrille.rosset
+
+	* [r39] update documentation for ang2pix, etc to precise dimension
+	  of theta,phi [rad]
+
+2009-01-12 18:09  cyrille.rosset
+
+	* [r37] Add tag version 0.9.4
+
+2009-01-11 03:04  cyrille.rosset
+
+	* [r36] correct bug in Rotator.angle_ref
+
+2009-01-08 19:24  cyrille.rosset
+
+	* [r35] update the INSTALL, TODO files; remove obsolete do_inst
+	  script
+
+2009-01-08 18:47  cyrille.rosset
+
+	* [r34] Add svn:ignore properties ; update version
+
+2009-01-08 18:14  cyrille.rosset
+
+	* [r33] Add documentation to the Rotator class; makes it available
+	  as healpy.Rotator
+
+2009-01-06 13:35  cyrille.rosset
+
+	* [r32] update version number
+
+2009-01-06 13:19  cyrille.rosset
+
+	* [r31] update ChangeLog
+
+2009-01-06 13:04  cyrille.rosset
+
+	* [r30] Add flip keyword to mollview/gnomview (solve issue 13);
+	  correct graticule paramters (solve issue 12); extend xlim/ylim
+	  for mollview (solve issue 14)
+
+2008-12-29 14:02  cyrille.rosset
+
+	* [r29] Update ChangeLog
+
+2008-12-29 13:48  cyrille.rosset
+
+	* [r28] Add margins keyword to mollview; invert cols and rows for
+	  sub= in mollview and gnomview
+
+2008-12-29 13:38  cyrille.rosset
+
+	* [r27] Add margins keyword to mollview; invert cols and rows for
+	  sub= in mollview and gnomview
+
+2008-12-17 17:01  cyrille.rosset
+
+	* [r26] Add ChangeLog file
+
+2008-12-12 14:00  cyrille.rosset
+
+	* [r25] add property on version.py
+
+2008-12-12 13:48  cyrille.rosset
+
+	* [r23] minor bug corrected (ud_grade: order_out=order_in if not
+	  given ; reorder imported in __init__.py); no compilation of
+	  healpy for setup.py sdist
+
+2008-12-12 13:27  cyrille.rosset
+
+	* [r21] order_out=order_in if not given in ud_grade ; import
+	  reorder in __init__.py
+
+2008-12-12 08:03  cyrille.rosset
+
+	* [r19] Adapt HistEqNorm to numpy 1.2 (change in histogram bins
+	  format)
+
+2008-12-11 22:45  cyrille.rosset
+
+	* [r17] Correct bug in LinNorm2 giving incorrect color scale with
+	  some version of numpy (masked array problem?)
+
+2008-12-08 18:54  cyrille.rosset
+
+	* [r15] Add test directory and doc directory
+
+2008-12-08 18:33  cyrille.rosset
+
+	* [r14] Add reference direction rotation in rotator (for
+	  polarisation). Not yet tested.
+
+2008-12-02 18:25  cyrille.rosset
+
+	* [r13] modify gnomview and mollview to make blank maps (for
+	  overplotting), to replace current axes (option hold), or to make
+	  subplots on the current figure (option sub)
+
+2008-11-26 12:04  cyrille.rosset
+
+	* [r12] Add -fPIC into compiler option
+
+2008-11-17 13:40  cyrille.rosset
+
+	* [r11] default for number of iteration set to 1 instead of 3
+
+2008-11-07 09:24  cyrille.rosset
+
+	* [r10] correct issue 4: lonlat keyword not taken into account for
+	  output
+
+2008-11-05 11:58  cyrille.rosset
+
+	* [r9] add query_disc function and related functions
+
+2008-11-03 13:45  cyrille.rosset
+
+	* [r8] - correct bug in healpy.alm2map_der1 : was setting almI(0,0)
+	  to zero (same bug as in alm2map)
+
+2008-11-03 13:43  cyrille.rosset
+
+	* [r7] - correct bug in alm_map_tools.cc for alm2map_der1\n-
+	  correct bug in healpy.alm2map : was setting almI(0,0) to zero
+
+2008-10-28 09:21  cyrille.rosset
+
+	* [r6] add alm2map_der1
+
+2008-10-28 09:20  cyrille.rosset
+
+	* [r5] Update to Healpix_2.10 version
+
+2008-10-03 12:24  cyrille.rosset
+
+	* [r4] Add fit/remove_dipole/monopole
+
+2008-08-31 16:56  cyrille.rosset@gmail.com
+
+	* [r2] First import of current trunk.
+
+2008-08-29 09:32  
+
+	* [r1] Initial directory structure.
+
