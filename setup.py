@@ -88,8 +88,7 @@ setup(name='healpy',
                   'healpy.projector','healpy.rotator',
                   'healpy.projaxes','healpy.version'],
       ext_modules=[pixel_lib,spht_lib,hfits_lib],
-      package_data={'healpy': ['data/*.fits']},
-      license='GPLv2'
+      package_data={'healpy': ['data/*.fits']}
       )
 
 

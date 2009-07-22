@@ -46,8 +46,6 @@ from sphtfunc import (anafast,map2alm,
 
 from query_disc_func import *
 
-from zoomtool import mollzoom,set_g_clim
-
 from rotator import Rotator
 
 from _healpy_sph_transform_lib import _alm2signal
@@ -55,7 +53,7 @@ from _healpy_pixel_lib import UNSEEN
 
 try:
     from visufunc import (mollview,graticule,delgraticules,gnomview,
-                          projplot,projscatter, projtext, cartview)
+                          projplot,projscatter, projtext)
     if visufunc.matplotlib.__version__ == '0.98,3':
         warnings.warn("Bug in matplotlib 0.98.3 prevents mollview to work\n"+
                       "You should upgrade to matplotlib 0.98.4 or above",

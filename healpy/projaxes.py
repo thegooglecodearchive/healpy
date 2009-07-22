@@ -364,7 +364,7 @@ class SphericalProjAxes(axes.Axes,object):
         phi0 = npy.arctan2(vy,vx)
         return phi0 - fov/sth/2., phi0 + fov/sth/2.
 
-    def graticule(self,dpar=None,dmer=None,coord=None,local=None,verbose=True,**kwds):
+    def graticule(self,dpar=None,dmer=None,coord=None,local=None,**kwds):
         """Draw a graticule.
         
         Input:
@@ -373,8 +373,6 @@ class SphericalProjAxes(axes.Axes,object):
          - coord: coordinate system of the graticule ('G', 'E' or 'C')
          - local: if True, no rotation performed at all
         """
-        gratargs = (dpar,dmer,coord,local)
-        gratkwds = kwds
         if dpar is None: dpar=self._gratdef['dpar']
         if local is None: local=self._gratdef['local']
         if dmer is None: dmer = dpar
@@ -398,7 +396,7 @@ class SphericalProjAxes(axes.Axes,object):
         if u_pmax: pmax = u_pmax
         if u_mmin: mmin = u_mmin
         if u_mmax: mmax = u_pmax
-        if verbose: print pmin/dtor,pmax/dtor,mmin/dtor,mmax/dtor
+        print pmin/dtor,pmax/dtor,mmin/dtor,mmax/dtor
         if not kwds.pop('force',False):
             dpar,dmer = self._get_interv_graticule(pmin,pmax,dpar,
                                                    mmin,mmax,dmer)
@@ -450,15 +448,15 @@ class SphericalProjAxes(axes.Axes,object):
             gratlines.append(self.projplot(phi*0+pi-1.e-10, phi,'-k',
                                            lw=1,direct=True))            
         if hasattr(self,'_graticules'):
-            self._graticules.append((gratargs,gratkwds,gratlines))
+            self._graticules.append(gratlines)
         else:
-            self._graticules = [(gratargs,gratkwds,gratlines)]
-    
+            self._graticules = [gratlines]
+
     def delgraticules(self):
         """Delete all graticules previously created on the Axes.
         """
         if hasattr(self,'_graticules'):
-            for dum1,dum2,g in self._graticules:
+            for g in self._graticules:
                 for gl in g:
                     for l in gl: self.lines.remove(l)
             del self._graticules
@@ -489,10 +487,10 @@ class SphericalProjAxes(axes.Axes,object):
             dmer = dpar = max(dmer,dpar)
         vdeg = npy.floor(npy.around(dpar/dtor,10))
         varcmin = (dpar/dtor-vdeg)*60.
-        if verbose: print "The interval between parallels is %d deg %.2f'."%(vdeg,varcmin)
+        print "The interval between parallels is %d deg %.2f'."%(vdeg,varcmin)
         vdeg = npy.floor(npy.around(dmer/dtor,10))
         varcmin = (dmer/dtor-vdeg)*60.
-        if verbose: print "The interval between meridians is %d deg %.2f'."%(vdeg,varcmin)
+        print "The interval between meridians is %d deg %.2f'."%(vdeg,varcmin)
         return dpar,dmer
         
 class GnomonicAxes(SphericalProjAxes):
