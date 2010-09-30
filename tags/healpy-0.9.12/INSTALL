@@ -1,0 +1,23 @@
+Installation procedure for Healpy:
+---------------------------------
+
+* Note: Healpix is included, so you don't need to get it separately
+
+The installation procedure is very simple:
+
+> cd healpy-0.9.3.1
+> python setup.py build
+
+If everything goes fine, you can give a test:
+> cd build/lib*
+> ipython -pylab
+>>> import healpy as H
+>>> H.mollview(arange(12))
+
+If the plot looks good, you can install:
+> sudo python setup.py install  # install in default location, need root rights
+or
+> python setup.py install --install-lib=~/Softs/Python # will install healpy in directory ~/Softs/Python, which then must be in your PYTHONPATH
+
+That's it !
+
