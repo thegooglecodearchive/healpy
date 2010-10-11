@@ -1,0 +1,419 @@
+2010-10-11 14:42  cyrille.rosset
+
+	* [r123] ., ChangeLog, healpy/version.py: create new version 0.9.13
+
+2010-10-11 14:29  cyrille.rosset
+
+	* [r121] correct bug in zoomtool - redisplays scatter plot when
+	  changing the gnomview
+
+2010-10-02 02:12  andrea.zonca@gmail.com
+
+	* [r120] Merge branch 'devel'
+
+2010-10-02 01:53  andrea.zonca@gmail.com
+
+	* [r119] fixed version number also for github repo
+
+2010-09-07 20:07  andrea.zonca@gmail.com
+
+	* [r116] first implementation of read cl and write cl for T only,
+	  needs testing with IDL
+
+2010-08-30 20:21  andrea.zonca@gmail.com
+
+	* [r115] bug fixed in theta check
+
+2010-08-20 07:51  andrea.zonca@gmail.com
+
+	* [r114] fixed bug in vec2ang in case of monodimensional arrays
+
+2010-08-20 00:02  andrea.zonca@gmail.com
+
+	* [r113] implemented vec2ang
+
+2010-07-30 09:36  cyrille.rosset
+
+	* [r112] update ChangeLog
+
+2010-07-30 09:28  cyrille.rosset
+
+	* [r111] update ChangeLog
+
+2010-07-29 16:37  cyrille.rosset
+
+	* [r108] Add an option to map2alm and anafast not to subtract map
+	  average before computing alm (issue 40)
+
+2010-07-29 16:28  cyrille.rosset
+
+	* [r107] UNSEEN is now taken into account properly (was broken for
+	  float32 maps)
+
+2010-07-14 18:30  andrea.zonca@gmail.com
+
+	* [r106] nest=None for reading a map in the same ordering whichever
+	  it is
+
+2010-06-22 20:54  andrea.zonca@gmail.com
+
+	* [r105] fix if the UNSEEN value read from fits file is not exaclty
+	  -1.6375e30
+
+2010-06-22 20:08  andrea.zonca@gmail.com
+
+	* [r104] create a masked array for map, useful for summing,
+	  averaging and making histograms (using .compressed())
+
+2010-06-22 19:48  andrea.zonca@gmail.com
+
+	* [r103] fix in case the NSIDE is stored as string in the header
+
+2010-06-17 22:46  andrea.zonca@gmail.com
+
+	* [r102] removed import math, not used anymore
+
+2010-06-17 22:44  andrea.zonca@gmail.com
+
+	* [r101] implementation of ang2vec (in python, with support for
+	  vectors
+
+2010-06-10 15:12  cyrille.rosset@gmail.com
+
+	* [r98] query_disc now returns int64 array
+
+2010-06-07 12:54  lejeune@apc.univ-paris7.fr
+
+	* [r96] omp compilation affects spht_lib only
+
+2010-06-03 10:00  cyrille.rosset@gmail.com
+
+	* [r93] use pyfits to get pixwin function (segfault with c++
+	  version)
+
+2010-05-28 23:27  andrea.zonca@gmail.com
+
+	* [r92] ignore pyc and so files
+
+2010-05-28 23:11  andrea.zonca@gmail.com
+
+	* [r91] added norm documentation to mollview
+
+2010-05-28 23:05  andrea.zonca@gmail.com
+
+	* [r90] added documentation to read_map for reading polarization
+
+2010-05-27 10:31  lejeune@apc.univ-paris7.fr
+
+	* [r89] license option restored
+
+2010-05-27 10:27  lejeune@apc.univ-paris7.fr
+
+	* [r88] + openmp
+
+2010-05-03 10:33  cyrille.rosset@gmail.com
+
+	* [r87] change version.py
+
+2010-05-03 10:30  cyrille.rosset@gmail.com
+
+	* [r86] Correct doc typos
+
+2010-05-03 10:11  cyrille.rosset@gmail.com
+
+	* [r85] correct error message for bad npix/nside values
+
+2010-04-19 17:00  cyrille.rosset@gmail.com
+
+	* [r84] Correct bug in query_disc (error when no pixel in disc).
+	  Solve issue 31.
+
+2010-04-19 16:33  cyrille.rosset@gmail.com
+
+	* [r83] Correct bug in ud_grade for bool maps
+
+2009-09-24 05:41  cyrille.rosset
+
+	* [r79] adjust position of help text
+
+2009-09-23 17:51  cyrille.rosset
+
+	* [r78] add info display to mollzoom; correct bug for graticule
+	  near south pole
+
+2009-08-11 20:14  cyrille.rosset
+
+	* [r77] remove const qualifier to solve issue 19 (in python 2.4
+
+2009-08-11 13:52  cyrille.rosset
+
+	* [r76] add npy. in sphtfunc.py/alm2cl. Solve issue 22.
+
+2009-08-11 13:50  cyrille.rosset
+
+	* [r75] correct bug in rotator (missing npy) and in projaxes
+	  (missing verbose keyword)
+
+2009-07-22 16:21  cyrille.rosset
+
+	* [r74] correctionf for issue 20
+
+2009-07-21 15:41  cyrille.rosset
+
+	* [r70] new tag 0.9.8
+
+2009-07-21 15:14  cyrille.rosset
+
+	* [r68] correct bug in __init__; add cstdio in some files of hpbeta
+
+2009-07-16 15:22  cyrille.rosset
+
+	* [r67] update zoomtool
+
+2009-07-16 15:05  cyrille.rosset
+
+	* [r66] add zoomtool capabilities
+
+2009-07-15 13:16  cyrille.rosset
+
+	* [r65] addinformation for graticule, to easily rebuild it if
+	  needed (for mollzoom)
+
+2009-07-15 13:14  cyrille.rosset
+
+	* [r64] addinformation for graticule, to easily rebuild it if
+	  needed (for mollzoom)
+
+2009-07-10 00:31  cyrille.rosset
+
+	* [r63] set version number and modify ChangeLog
+
+2009-07-10 00:23  cyrille.rosset
+
+	* [r61] svn cleaning
+
+2009-07-10 00:11  cyrille.rosset
+
+	* [r60] correct error in gnomview (was indicating wrong
+	  latitude/map value in the status bar). Cartview is available as
+	  healpy.cartview
+
+2009-06-17 07:21  cyrille.rosset
+
+	* [r59] Update Changelog
+
+2009-06-17 07:18  cyrille.rosset
+
+	* [r58] Add version 0.9.6.2, correcting MANIFEST.in file to add
+	  COPYING in tarball
+
+2009-06-16 21:46  cyrille.rosset
+
+	* [r57] add license information at top of test_fit_dipole.py
+
+2009-06-09 13:55  cyrille.rosset
+
+	* [r55] Update ChangeLog
+
+2009-06-09 13:47  cyrille.rosset
+
+	* [r53] Add COPYING file at top. Also add missing
+	  Py_INCREF(Py_None).
+
+2009-06-09 13:43  cyrille.rosset
+
+	* [r52] Add license information in files and in COPYING file at the
+	  top of directory tree
+
+2009-04-17 02:45  cyrille.rosset
+
+	* [r51] Update ChangeLog
+
+2009-04-17 02:40  cyrille.rosset
+
+	* [r49] Update ChangeLog; tag version 0.9.6
+
+2009-03-29 17:46  cyrille.rosset
+
+	* [r48] Add get_all_neighbours function (contribution from Sergey
+	  E. Koposov). Solve issue 17.
+
+2009-03-29 16:24  cyrille.rosset
+
+	* [r47] add ring2nest import in query_disc_func, so it works with
+	  nest=True; solve issue 18.
+
+2009-03-25 16:10  cyrille.rosset
+
+	* [r46] change warnings.ImportWarning to ImportWarning, and define
+	  ImportWarning if it does not exist (solve issue 16)
+
+2009-03-12 16:51  cyrille.rosset
+
+	* [r45] Update ChangeLog
+
+2009-03-12 14:55  cyrille.rosset
+
+	* [r43] Add #include <cstring> for compatibility with some new
+	  compilers
+
+2009-02-22 22:41  cyrille.rosset
+
+	* [r42] Correct missing npy. in _ud_grade_core
+
+2009-01-24 16:19  cyrille.rosset
+
+	* [r41] Update version.py
+
+2009-01-24 16:19  cyrille.rosset
+
+	* [r40] Add cartwiew, CartesianAxes, CartesianProj; tweak
+	  _segment_threshold, add _segment_step_rad, some new keywords to
+	  graticule...
+
+2009-01-18 20:51  cyrille.rosset
+
+	* [r39] update documentation for ang2pix, etc to precise dimension
+	  of theta,phi [rad]
+
+2009-01-12 18:09  cyrille.rosset
+
+	* [r37] Add tag version 0.9.4
+
+2009-01-11 03:04  cyrille.rosset
+
+	* [r36] correct bug in Rotator.angle_ref
+
+2009-01-08 19:24  cyrille.rosset
+
+	* [r35] update the INSTALL, TODO files; remove obsolete do_inst
+	  script
+
+2009-01-08 18:47  cyrille.rosset
+
+	* [r34] Add svn:ignore properties ; update version
+
+2009-01-08 18:14  cyrille.rosset
+
+	* [r33] Add documentation to the Rotator class; makes it available
+	  as healpy.Rotator
+
+2009-01-06 13:35  cyrille.rosset
+
+	* [r32] update version number
+
+2009-01-06 13:19  cyrille.rosset
+
+	* [r31] update ChangeLog
+
+2009-01-06 13:04  cyrille.rosset
+
+	* [r30] Add flip keyword to mollview/gnomview (solve issue 13);
+	  correct graticule paramters (solve issue 12); extend xlim/ylim
+	  for mollview (solve issue 14)
+
+2008-12-29 14:02  cyrille.rosset
+
+	* [r29] Update ChangeLog
+
+2008-12-29 13:48  cyrille.rosset
+
+	* [r28] Add margins keyword to mollview; invert cols and rows for
+	  sub= in mollview and gnomview
+
+2008-12-29 13:38  cyrille.rosset
+
+	* [r27] Add margins keyword to mollview; invert cols and rows for
+	  sub= in mollview and gnomview
+
+2008-12-17 17:01  cyrille.rosset
+
+	* [r26] Add ChangeLog file
+
+2008-12-12 14:00  cyrille.rosset
+
+	* [r25] add property on version.py
+
+2008-12-12 13:48  cyrille.rosset
+
+	* [r23] minor bug corrected (ud_grade: order_out=order_in if not
+	  given ; reorder imported in __init__.py); no compilation of
+	  healpy for setup.py sdist
+
+2008-12-12 13:27  cyrille.rosset
+
+	* [r21] order_out=order_in if not given in ud_grade ; import
+	  reorder in __init__.py
+
+2008-12-12 08:03  cyrille.rosset
+
+	* [r19] Adapt HistEqNorm to numpy 1.2 (change in histogram bins
+	  format)
+
+2008-12-11 22:45  cyrille.rosset
+
+	* [r17] Correct bug in LinNorm2 giving incorrect color scale with
+	  some version of numpy (masked array problem?)
+
+2008-12-08 18:54  cyrille.rosset
+
+	* [r15] Add test directory and doc directory
+
+2008-12-08 18:33  cyrille.rosset
+
+	* [r14] Add reference direction rotation in rotator (for
+	  polarisation). Not yet tested.
+
+2008-12-02 18:25  cyrille.rosset
+
+	* [r13] modify gnomview and mollview to make blank maps (for
+	  overplotting), to replace current axes (option hold), or to make
+	  subplots on the current figure (option sub)
+
+2008-11-26 12:04  cyrille.rosset
+
+	* [r12] Add -fPIC into compiler option
+
+2008-11-17 13:40  cyrille.rosset
+
+	* [r11] default for number of iteration set to 1 instead of 3
+
+2008-11-07 09:24  cyrille.rosset
+
+	* [r10] correct issue 4: lonlat keyword not taken into account for
+	  output
+
+2008-11-05 11:58  cyrille.rosset
+
+	* [r9] add query_disc function and related functions
+
+2008-11-03 13:45  cyrille.rosset
+
+	* [r8] - correct bug in healpy.alm2map_der1 : was setting almI(0,0)
+	  to zero (same bug as in alm2map)
+
+2008-11-03 13:43  cyrille.rosset
+
+	* [r7] - correct bug in alm_map_tools.cc for alm2map_der1\n-
+	  correct bug in healpy.alm2map : was setting almI(0,0) to zero
+
+2008-10-28 09:21  cyrille.rosset
+
+	* [r6] add alm2map_der1
+
+2008-10-28 09:20  cyrille.rosset
+
+	* [r5] Update to Healpix_2.10 version
+
+2008-10-03 12:24  cyrille.rosset
+
+	* [r4] Add fit/remove_dipole/monopole
+
+2008-08-31 16:56  cyrille.rosset@gmail.com
+
+	* [r2] First import of current trunk.
+
+2008-08-29 09:32  
+
+	* [r1] Initial directory structure.
+
